@@ -214,7 +214,8 @@ AddEventHandler("takeBagOnFloor", function(id)
         ["@onfloor"] = 0,
         ["@coords"] = nil
     })
-    xPlayer.addInventoryItem("bag", 1)
+    Wait(500)
+    TriggerClientEvent("refreshBagOnFloor", -1, clotheSac)
 end)
 
 RegisterNetEvent("addBagItem")
